@@ -7,6 +7,7 @@ public class PlayerAttackManager : MonoBehaviour
     public static PlayerAttackManager Instance;
     [SerializeField]
     public Texture2D cursor;
+    Vector2 hotSpot;
     public bool playerAttackMode;
     public Transform target;
     [SerializeField]
@@ -18,6 +19,12 @@ public class PlayerAttackManager : MonoBehaviour
     void Awake()
     {
         Instance = this;
+        
+    }
+
+    void Start()
+    {
+        hotSpot = new Vector2(cursor.width / 2f, cursor.height / 2f);
     }
 
     void Update()
@@ -32,7 +39,7 @@ public class PlayerAttackManager : MonoBehaviour
     {
         if (PlayerTBC.Instance.playerStep && PlayerTBC.Instance.timer + shootCost < PlayerTBC.Instance.APMax && !playerAttackMode)
         {
-           Cursor.SetCursor(cursor, Vector2.zero, CursorMode.Auto);
+           Cursor.SetCursor(cursor, hotSpot, CursorMode.Auto);
            playerAttackMode = true;
         }
     }

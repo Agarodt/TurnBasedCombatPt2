@@ -24,8 +24,14 @@ public class PlayerTBC : MonoBehaviour
         }
         if (timer > APMax)
         {
-            playerStep = false;
-            timer = 0;
+            Pass();
         }
+    }
+
+    public void Pass()
+    {
+      playerStep = false;
+      timer = 0;
+      Destroy(MoveTarget);
     }
 }
