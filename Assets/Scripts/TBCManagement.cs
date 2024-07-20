@@ -13,8 +13,9 @@ public class TBCManagement : MonoBehaviour
     public int enemyTurn;
     [SerializeField]
     float currentTime;
+    public bool enemyStep;
     [SerializeField]
-    bool enemyStep;
+    GameObject WinTxt;
 
     void Awake()
     {
@@ -49,7 +50,11 @@ public class TBCManagement : MonoBehaviour
             enemyTurn = 0;
             enemyStep = false;
         }
-
+        
+        if (numOfEnemies <= 0)
+        {
+            WinTxt.SetActive(true);
+        }
        
     }
 }

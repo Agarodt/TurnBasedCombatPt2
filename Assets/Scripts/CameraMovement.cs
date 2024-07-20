@@ -15,19 +15,19 @@ public class CameraMovement : MonoBehaviour
     {
         if (Input.GetKeyDown("s"))
         {
-            transform.position = new Vector3(transform.position.x, transform.position.y - 0.1f, transform.position.z);
+            transform.position = new Vector3(transform.position.x, transform.position.y - 0.5f, transform.position.z);
         }
         if (Input.GetKeyDown("w"))
         {
-            transform.position = new Vector3(transform.position.x, transform.position.y + 0.1f, transform.position.z);
+            transform.position = new Vector3(transform.position.x, transform.position.y + 0.5f, transform.position.z);
         }
         if (Input.GetKeyDown("a"))
         {
-            transform.position = new Vector3(transform.position.x - 0.1f, transform.position.y, transform.position.z);
+            transform.position = new Vector3(transform.position.x - 0.5f, transform.position.y, transform.position.z);
         }
         if (Input.GetKeyDown("d"))
         {
-            transform.position = new Vector3(transform.position.x + 0.1f, transform.position.y, transform.position.z);
+            transform.position = new Vector3(transform.position.x + 0.5f, transform.position.y, transform.position.z);
         }
     }
 }

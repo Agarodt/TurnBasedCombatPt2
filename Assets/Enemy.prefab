@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5342205853975173353}
   - component: {fileID: 742029020089658612}
   - component: {fileID: 834591426791372144}
+  - component: {fileID: 8413287977889103762}
   - component: {fileID: 2185511773069695506}
   - component: {fileID: 1256944727572085262}
   - component: {fileID: 3235149514425726182}
@@ -103,6 +104,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   currentTurn: 0
+  distance: 0
+  moveSpeed: 1
+--- !u!114 &8413287977889103762
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5024198527418717749}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87ae74c22a3904155aa529efd41a5a8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackDistance: 10
+  timer: 0
+  timeMax: 5
+  attackCost: 3
+  attack: 0
+  enemyBullet: {fileID: 6483834250199145408, guid: 771fed33447824edb9af5dfdc6218606, type: 3}
 --- !u!114 &2185511773069695506
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -116,6 +137,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lives: 1
+  dead: 0
 --- !u!114 &1256944727572085262
 MonoBehaviour:
   m_ObjectHideFlags: 0

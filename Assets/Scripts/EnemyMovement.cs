@@ -4,10 +4,15 @@ using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour
 {
-    [SerializeField]
-    Transform target;
+    
+    public Transform target;
     
     public int currentTurn;
+
+    public float distance;
+
+    [SerializeField]
+    float moveSpeed = 1;
 
     void Start()
     {
@@ -18,7 +23,11 @@ public class EnemyMovement : MonoBehaviour
     
     void Update()
     {
-        if(!PlayerTBC.Instance.playerStep && currentTurn == TBCManagement.Instance.enemyTurn)
-        transform.position = Vector3.MoveTowards(transform.position, target.position, Time.deltaTime);
+        distance = Vector3.Distance(transform.position, target.position);
+        
+        if(TBCManagement.Instance.enemyStep && currentTurn == TBCManagement.Instance.enemyTurn && distance > 2)
+        {
+        transform.position = Vector3.MoveTowards(transform.position, target.position, Time.deltaTime * moveSpeed);
+        }
     }
 }
