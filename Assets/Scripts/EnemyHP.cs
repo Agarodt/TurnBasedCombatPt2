@@ -9,10 +9,6 @@ public class EnemyHP : MonoBehaviour
     [SerializeField]
     bool dead;
 
-    void Start()
-    {
-        EnemiesTurnManager.Instance.AddToList(gameObject);
-    }
 
     // Update is called once per frame
     void Update()

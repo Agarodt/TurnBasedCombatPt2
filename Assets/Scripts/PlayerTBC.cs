@@ -32,6 +32,9 @@ public class PlayerTBC : MonoBehaviour
     {
       playerStep = false;
       timer = 0;
+      if (MoveTarget != null)
+      {
       Destroy(MoveTarget);
+      }
     }
 }

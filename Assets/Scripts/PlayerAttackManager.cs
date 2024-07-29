@@ -58,4 +58,9 @@ public class PlayerAttackManager : MonoBehaviour
        Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
        playerAttackMode = false;
     }
+
+    public void Pass()
+    {
+        Player.Instance.GetComponent<PlayerTBC>().Pass();
+    }
 }
